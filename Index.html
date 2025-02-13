@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A romantic interactive Valentine's Day card.">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="Style.css">
+    <script defer src="Script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container" id="valentine">
+        <div class="gif">
+            <img src="https://media1.tenor.com/m/KusI_nTC1d8AAAAC/hi-waving.gif" class="gif" id="gif" alt="A cute waving character saying hi">
+        </div>
+        <div class="question">Will you be my Valentine?</div>
+        <div class="message" id="message">You make my heart flutter!</div>
+        <div class="buttons">
+            <button id="yes" class="button">Yes</button>
+            <button id="no" class="button">No</button>
+        </div>
+        <div class="happy-valentine">Happy Valentine's! 💖</div>
+        <div id="folder-container" class="hidden">
+            <button id="folder-button" class="folder-button">
+                <div class="folder-icon">
+                    <div class="folder-top"></div>
+                    <div class="folder-bottom"></div>
+                </div>
+            </button>
+            <div id="hidden-message" class="hidden-message hidden">Surprise! 💖</div>
+        </div>
+    </div>
+    <div id="heart-container">
+        <!-- Hearts and confetti elements here -->
+    </div>
+    <canvas id="pinkboard" title="Pink Heart Canvas"></canvas>
+    <noscript>
+      <p>JavaScript is disabled in your browser. Please enable JavaScript to view the canvas.</p>
+    </noscript>
+    <audio id="bgMusic" autoplay loop>
+        <source src="your-music-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>

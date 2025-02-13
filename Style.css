@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+  background: linear-gradient(to bottom, #ffe6e6, #ffccff);
+  background-size: cover;
+  font-family: 'Dancing Script', cursive;
+  color: #ff69b4;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  margin-top: 20%;
+}
+
+.gif {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  animation: bounce 2s infinite;
+}
+
+.gif img {
+  display: block;
+  margin: 0 auto;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeIn 2s;
+  text-shadow: 2px 2px #ffccff;
+}
+
+.message {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff1493;
+  margin-bottom: 15px;
+  animation: shake 0.5s;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #ff1493;
+  transform: scale(1.1);
+}
+
+#yes {
+  background-color: #32cd32;
+}
+
+#yes:hover {
+  transform: scale(1.2);
+}
+
+#no {
+  background-color: #ff4500;
+}
+
+#no:hover {
+  transform: translateX(20px);
+}
+
+#heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 24px;
+  color: pink;
+  animation: rise 5s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(255, 105, 180, 0.5));
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes rise {
+  0% { transform: translateY(100vh); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes confetti {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  100% { transform: translateY(100vh); opacity: 1; }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff69b4;
+  animation: confetti 3s linear infinite;
+}
+
+.happy-valentine {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-top: 20px;
+  animation: fadeIn 2s;
+  text-shadow: 2px 2px #ffccff;
+}
+
+.text-bubble {
+  position: absolute;
+  background-color: #ffccff;
+  color: #ff69b4;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s;
+  max-width: 200px;
+  text-align: center;
+}
+
+.text-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Position the arrow at the top of the bubble */
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffccff transparent transparent transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.folder-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.folder-icon {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  background-color: #ffcc00;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: bounce 2s infinite;
+}
+
+.folder-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #ffcc00;
+  border-radius: 5px 5px 0 0;
+  animation: folderOpen 2s infinite;
+}
+
+.folder-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #ffcc00;
+  border-radius: 0 0 5px 5px;
+}
+
+@keyframes folderOpen {
+  0%, 100% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(30deg);
+  }
+}
+
+.hidden-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff69b4;
+  margin-top: 20px;
+  animation: fadeIn 2s;
+  text-shadow: 2px 2px #ffccff;
+}
